@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Landscaping and Fencing</title>
+    <link rel="stylesheet" href="contactus.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="logo" srcset="">
+            <span>PRO LANDSCAPING & FENCING</span>
+        </div>
+        <div class="right">
+            <a href="index.html">
+                <span id="home">Home<span>.</span></span>
+            </a>
+            <a href="services.html">
+                <span id="services">Services<span>.</span></span>
+            </a>
+            <a href="testimonials.html">
+                <span id="testimonials">Testimonials<span>.</span></span>
+            </a>
+            <a href="contactus.html">
+                <span id="contactus">Contact Us</span>
+            </a>
+        </div>
+    </header>
+
+    <section id="contact-top">
+        <div class="contactmain">
+            <div class="details">
+                <div class="info">
+                    <h3>Location</h3>
+                    <p>Melbourne, VIC, Australia</p>
+                </div>
+                <div class="info">
+                    <h3>Email</h3>
+                    <p>prolandscapegardening@gmail.com</p>
+                </div>
+                <div class="info">
+                    <h3>Phone</h3>
+                    <p>+61 450 431 634</p>
+                </div>
+            </div>
+
+            <div class="map">
+                <img src="testimonial3.png" alt="Map of Melbourne">
+            </div>
+        </div>
+    </section>
+
+    
+    <div id="footer-placeholder"></div>
+    <script src="scripts.js"> </script>
+
+    <script>        
+    document.addEventListener("DOMContentLoaded", function () {
+                // Load footer from footer.html
+                fetch('footer.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('footer-placeholder').innerHTML = data;
+                    });
+            });
+    </script>
+
+    </body>
+        </html>

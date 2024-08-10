@@ -1,0 +1,169 @@
+@font-face {
+  font-family: "SatoshiVariable";
+  src: url("fonts/Satoshi-Variable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: "SatoshiVariable", Helvetica, sans-serif;
+}
+
+#footer {
+  padding: 2% 5% 0% 5%;
+}
+#footer h2 {
+  line-height: 1.1;
+  letter-spacing: -1px;
+  font-weight: 700;
+}
+#footer h3 {
+  line-height: 1.1;
+  letter-spacing: -1px;
+  font-weight: 600;
+}
+#footer button {
+  all: unset;
+  text-align: center;
+  padding: 12px;
+  height: 200px;
+  width: 200px;
+  font-size: 22px;
+}
+#footer .follow-us {
+  margin-top: 60px;
+  background-color: #050F27;
+  display: flex;
+  color: white;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 125px;
+  overflow: hidden;
+  width: 100vw; /* Full width of the viewport */
+  position: relative; /* Ensure it covers the full width */
+  left: 50%; /* Adjust position */
+  transform: translateX(-50%); /* Center the element */
+}
+#footer .follow-us .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+#footer .follow-us .container h2 {
+  font-size: 62px;
+}
+#footer .follow-us .container button {
+  background-color: white;
+  color: #050F27;
+  font-weight: 600;
+  border-radius: 60px;
+  height: 200px;
+  width: 200px;
+  min-width: 200px;
+  z-index: 2;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+#footer .follow-us .container button:hover {
+  transform: scale(1.1);
+}
+#footer .follow-us .container .background-leaf {
+  position: absolute;
+  right: -150px;
+  top: -150px;
+  height: 600px;
+}
+#footer .follow-us .container .icons-wrapper img {
+  height: 60px;
+  margin: 30px 10px 0px;
+  cursor: pointer;
+}
+#footer .follow-us .caption-4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+  padding: 20px 30px;
+  font-weight: 600;
+  border-radius: 50px;
+  background-color: #4B5263;
+}
+
+.quote-wrapper {
+  overflow: hidden;
+  transition: all 0.2s ease;
+  background-color: rgba(61, 61, 61, 0.845);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  visibility: visible;
+  animation: fadeIn 0.1s forwards;
+}
+.quote-wrapper.hidden {
+  opacity: 0;
+  visibility: hidden;
+  animation: fadeOut 0.1s forwards;
+}
+.quote-wrapper button {
+  background-color: #979eb1;
+  border-radius: 60px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.quote-wrapper button:hover {
+  background-color: #20315c;
+  transform: scale(1.1);
+}
+.quote-wrapper form {
+  width: min(460px, 90%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 45px;
+  background-color: white;
+  border-radius: 60px;
+  gap: 10px;
+}
+.quote-wrapper form input, .quote-wrapper form textarea {
+  all: unset;
+  font-size: 22px;
+  border: 4px solid #121B32;
+  border-radius: 22px;
+  color: black;
+  padding: 10px 16px;
+  width: 100%;
+}
+.quote-wrapper form #enquiry {
+  height: 140px;
+  text-align: start;
+}
+.quote-wrapper form button {
+  padding: 24px 48px;
+  height: fit-content;
+  width: fit-content;
+  font-size: 22px;
+  margin-top: 16px;
+}
+
+/*# sourceMappingURL=footer.css.map */

@@ -1,0 +1,156 @@
+@font-face {
+    font-family: "SatoshiVariable";
+    src: url("fonts/Satoshi-Variable.ttf") format("truetype");
+    font-weight: 100 900; // Using variable font syntax for weight range
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: "SatoshiVariable", Helvetica, sans-serif;
+}
+
+header {
+    height: 96px;
+    width: 100%;
+    background-color: white;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 5%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    .logo {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        font-size: 24px;
+        gap: 10px;
+
+        img {
+            height: 60px;
+        }
+    }
+
+    .right {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        font-size: 18px;
+
+        a {
+            text-decoration: none;
+            color: unset;
+        }
+
+        #contactus {
+            font-weight: 600;
+            padding: 10px 20px;
+            background-color: black;
+            border-radius: 21px;
+            color: #ffffff;
+            transition: transform 0.3s ease;
+            word-break: nowrap;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        span {
+            position: relative;
+            font-weight: 500;
+
+            span {
+                display: none;
+
+                &.active {
+                    display: inline;
+                    font-weight: 900;
+                    position: absolute;
+                    top: 8px;
+                    left: 50%;
+                }
+            }
+        }
+    }
+}
+
+#contact-top {
+    padding: 5% 0%;
+    text-align: center;
+    margin-top: 96px;
+
+    .contactmain {
+        display: flex;
+        justify-content: flex-start;
+        border-radius: 15px;
+        padding: 20px;
+        gap: 0px;
+        color: #ffffff;
+        /* White text color */
+        max-width: 1450px;
+        margin: 0 auto;
+    }
+
+    .details {
+        background-color: #050F27;
+        /* Dark blue background */
+        border-radius: 40px;
+        flex-basis: 60%;
+        padding: 40px;
+        /* Add padding to ensure content is not touching the border */
+        margin: 0;
+        /* Reset margin */
+    }
+
+    .info {
+        display: flex;
+        justify-content: space-between;
+        /* Space between h3 and p */
+        align-items: center;
+        margin-bottom: 20px;
+        /* Space between rows */
+        padding: 20px 20px;
+        /* Equal padding on left and right */
+    }
+
+    .info h3 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .info p {
+        margin: 0;
+        font-size: 22px;
+        font-weight: 500;
+    }
+
+    .map {
+        flex-basis: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+
+    }
+
+    .map img {
+        max-width: 100%;
+        border-radius: 35px;
+        border: 4px solid #050F27;
+        /* Complete border property */
+    }
+
+}
