@@ -95,23 +95,7 @@
             <h3>Contact us today and take the first step towards transforming your outdoor space into a masterpiece.</h3>
             <button class="get-quote-button">Get a Quote</button>
         </div>
-        <div class="follow-us">
-            <div class="container">
-                <img src="leaffigma.png" class="background-leaf">
-                <div class="left-wrapper">
-                    <h2>Follow us on<br>Social Media</h2>
-                    <div class="icons-wrapper">
-                        <img src="Instagram.png" alt="" srcset="">
-                        <img src="Facebook.png" alt="" srcset="">
-                    </div>
-                </div>
-                <button class="get-quote-button">Get a Quote</button>
-            </div>
-            <div class="caption-4">
-                <span>PRO LANDSCAPING AND FENCING</span>
-                <span>Contact Us</span>
-            </div>
-        </div>
+        <div id="footer-placeholder"></div>
     </section>
 
 
@@ -129,5 +113,31 @@
 
 
     <script src="scripts.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                    document.querySelectorAll(".get-quote-button").forEach(button => {
+                        button.addEventListener("click", function () {
+                            console.log("clicked")
+                            document.querySelector(".quote-wrapper").classList.remove("hidden");
+                        });
+                    })
+                    document
+                        .querySelector(".quote-wrapper")
+                        .addEventListener("click", function (e) {
+                        document.querySelector(".quote-wrapper").classList.add("hidden");
+                        });
+
+                    document
+                        .querySelector(".quote-wrapper>form")
+                        .addEventListener("click", function (e) {
+                        e.stopPropagation();
+                        });
+                });
+        });
+    </script>
 </body>
 </html>

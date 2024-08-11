@@ -72,15 +72,8 @@
             </div>
 
             <div class="landscapingservices">
-                <h3> Our <br> landscaping <br> services:  </h3>
-                    <ul>
-                        <li> All types of Decking </li>
-                        <li> Paving </li>
-                        <li>Landscaping designs & Ideas</li>
-                        <li> Irrigation</li>
-                        <li>Planting and Gardens</li>
-                        <li>Pergolas</li>
-                        <li>Garden Beds</li>
+                <h3 id="content-3"></h3>
+                    <ul id="content-4">
                     </ul>
                
             </div>
@@ -138,12 +131,16 @@
             } else if (page === 'fencing') {
                 document.getElementById('content-1').innerHTML = "Fencing isn\’t just about boundaries; it defines spaces, ensures privacy, and enhances security. Our services include options from classic rustic wooden fences to modern, durable color bond designs.";
                 document.getElementById('content-2').innerHTML = "We create fences that not only complement the landscape but also provide peace of mind.";
+                document.getElementById('content-3').innerHTML = "Types of<br>retaining walls<br>we offer:"
+                document.getElementById('content-4').innerHTML = "<li>Concrete Sleepers </li> <li>Render Walls </li> <li>Versa Walls</li> <li>Stone Walls</li>"
             } else if (page === 'concreting') {
                 document.getElementById('content-1').innerHTML = "Concrete services lay the foundation for solid structures and enduring landscapes. From driveways to patios, our concrete services ensure quality craftsmanship and lasting durability.";
                 document.getElementById('content-2').innerHTML = "We deliver concrete solutions that are functional and beautiful, enhancing outdoor spaces.";                
             } else {
                 document.getElementById('content-1').innerHTML = "Landscaping transforms ordinary spaces into extraordinary places, where every tree, plant and stone is carefully chosen to evoke a specific mood or ambience.";
                 document.getElementById('content-2').innerHTML = "It's about blending elements like color, texture, and form to craft environments that inspire and rejuvenate.";
+                document.getElementById('content-3').innerHTML = "Our <br> landscaping <br> services:"
+                document.getElementById('content-4').innerHTML = "<li> All types of Decking </li> <li> Paving </li> <li>Landscaping designs & Ideas</li> <li> Irrigation</li> <li>Planting and Gardens</li> <li>Pergolas</li> <li>Garden Beds</li>"
             }
                     // Load footer from footer.html
             fetch('footer.html')
