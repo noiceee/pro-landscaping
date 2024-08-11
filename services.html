@@ -34,20 +34,17 @@
 
         <section id="services-top">
             <div class="servicetype">
-                <button class="servicebutton active">Landscaping</button>
-                <button class="servicebutton">Retaining Walls</button>
-                <button class="servicebutton">Fencing</button>
-                <button class="servicebutton">Concreting</button>
+                <a href="/services.html" class="servicebutton">Landscaping</a>
+                <a href="/services.html?page=retaining-walls" class="servicebutton">Retaining Walls</a>
+                <a href="/services.html?page=fencing" class="servicebutton">Fencing</a>
+                <a href="/services.html?page=concreting" class="servicebutton">Concreting</a>
             </div>
         </section>
 
         <section id="landscaping">
             <div class="grid-container">
                 <div class="grid-item item1">
-                    <h3>
-                        Landscaping transforms ordinary <br> spaces into extraordinary places,<br> where every tree,
-                        plant and stone<br> is carefully chosen to evoke a <br>specific mood or ambience.
-                    </h3>
+                    <h3 id="content-1"></h3>
                 </div>
                 <div class="grid-item item2">
                     <img src="landscaping1.png" alt="">
@@ -65,8 +62,7 @@
                 </div>
 
                 <div class="item5">
-                    <p>It's about blending elements like <br>color, texture, and form to craft<br> environments that inspire and<br>
-                        rejuvenate.</p>
+                    <p id="content-2"></p>
                 </div>
 
             </div>
@@ -106,19 +102,78 @@
 
         </section>
 
-
         <div id="footer-placeholder"></div>
-        <script src="scripts.js"> </script>
+
+        <div class="quote-wrapper hidden">
+            <form action="" method="post">
+                <h1>Get a Quote</h1>
+                <input type="text" name="name" id="name" placeholder="Name" required>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <input type="number" name="contact" id="contact" placeholder="Contact" required>
+                <input type="text" name="suburb" id="suburb" placeholder="Suburb" required>
+                <textarea type="text" name="enquiry" id="enquiry" placeholder="Enquiry" required></textarea>
+                <button type="submit" class="submit-quote">Submit</button>
+            </form>
+        </div>
 
         <script>        
         document.addEventListener("DOMContentLoaded", function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const page = urlParams.get('page');
+            const serviceButtons = document.querySelectorAll('.servicebutton');
+            // Iterate through the service buttons and toggle the 'active' class
+            serviceButtons.forEach(button => {
+                // Get the href attribute of the button and extract the 'page' parameter
+                const buttonPage = new URL(button.href).searchParams.get('page') || null;
+                // If the button's 'page' parameter matches the current 'page' in the URL, add 'active' class
+                if (buttonPage === page) {
+                    button.classList.add('active');
+                } else {
+                    button.classList.remove('active');
+                }
+            });
+            if (page === 'retaining-walls') {
+                document.getElementById('content-1').innerHTML = "Retaining walls are the backbone of a well-designed landscape, offering structural support and aesthetic appeal. They prevent soil erosion, create level platforms on slopes, and add visual interest to outdoor spaces.";
+                document.getElementById('content-2').innerHTML = "we ensure not only durability but also elegance and function seamlessly into your landscape design.";
+            } else if (page === 'fencing') {
+                document.getElementById('content-1').innerHTML = "Fencing isn\’t just about boundaries; it defines spaces, ensures privacy, and enhances security. Our services include options from classic rustic wooden fences to modern, durable color bond designs.";
+                document.getElementById('content-2').innerHTML = "We create fences that not only complement the landscape but also provide peace of mind.";
+            } else if (page === 'concreting') {
+                document.getElementById('content-1').innerHTML = "Concrete services lay the foundation for solid structures and enduring landscapes. From driveways to patios, our concrete services ensure quality craftsmanship and lasting durability.";
+                document.getElementById('content-2').innerHTML = "We deliver concrete solutions that are functional and beautiful, enhancing outdoor spaces.";                
+            } else {
+                document.getElementById('content-1').innerHTML = "Landscaping transforms ordinary spaces into extraordinary places, where every tree, plant and stone is carefully chosen to evoke a specific mood or ambience.";
+                document.getElementById('content-2').innerHTML = "It's about blending elements like color, texture, and form to craft environments that inspire and rejuvenate.";
+            }
                     // Load footer from footer.html
-                    fetch('footer.html')
-                        .then(response => response.text())
-                        .then(data => {
-                            document.getElementById('footer-placeholder').innerHTML = data;
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                    document.querySelectorAll(".get-quote-button").forEach(button => {
+                        button.addEventListener("click", function () {
+                            console.log("clicked")
+                            document.querySelector(".quote-wrapper").classList.remove("hidden");
+                        });
+                    })
+                    document
+                        .querySelector(".quote-wrapper")
+                        .addEventListener("click", function (e) {
+                        document.querySelector(".quote-wrapper").classList.add("hidden");
+                        });
+
+                    document
+                        .querySelector(".quote-wrapper>form")
+                        .addEventListener("click", function (e) {
+                        e.stopPropagation();
                         });
                 });
+        });
+        </script>
+        <script src="scripts.js">
+        </script>
+        <script>
+            console.log("rhdhe")
         </script>
 </body>
 

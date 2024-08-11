@@ -13,6 +13,7 @@
 body {
   background-color: #ffffff;
   font-family: "SatoshiVariable", Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 header {
@@ -101,6 +102,7 @@ header .right span span.active {
   padding: 10px 20px;
   border-radius: 21px;
   margin-top: 40px;
+  cursor: pointer;
 }
 #landing-section .carousel {
   margin-top: 70px;
@@ -153,9 +155,11 @@ header .right span span.active {
 }
 #about-section .grid-container {
   display: grid;
-  grid-template-columns: 3fr 3fr 1fr 3fr; /* First row: 60% for first column, 30% for second column, 10% for third column */
+  grid-template-columns: 3fr 3fr 1fr 3fr;
+  /* First row: 60% for first column, 30% for second column, 10% for third column */
   column-gap: 16px;
-  row-gap: 36px; /* Optional: Adds a gap between grid items */
+  row-gap: 36px;
+  /* Optional: Adds a gap between grid items */
   grid-auto-rows: 400px;
 }
 #about-section .grid-container img {
@@ -265,10 +269,14 @@ header .right span span.active {
   gap: 28px;
   padding: 125px;
   overflow: hidden;
-  width: 100vw; /* Full width of the viewport */
-  position: relative; /* Ensure it covers the full width */
-  left: 50%; /* Adjust position */
-  transform: translateX(-50%); /* Center the element */
+  width: 100vw;
+  /* Full width of the viewport */
+  position: relative;
+  /* Ensure it covers the full width */
+  left: 50%;
+  /* Adjust position */
+  transform: translateX(-50%);
+  /* Center the element */
 }
 #landing-end .follow-us .container {
   display: flex;
@@ -335,13 +343,16 @@ header .right span span.active {
   visibility: visible;
   animation: fadeIn 0.1s forwards;
 }
+.quote-wrapper h1 {
+  margin-bottom: 10px;
+}
 .quote-wrapper.hidden {
   opacity: 0;
   visibility: hidden;
   animation: fadeOut 0.1s forwards;
 }
 .quote-wrapper button {
-  background-color: #979eb1;
+  background-color: #37415d;
   border-radius: 60px;
   color: white;
   font-weight: 600;
@@ -363,7 +374,8 @@ header .right span span.active {
   border-radius: 60px;
   gap: 10px;
 }
-.quote-wrapper form input, .quote-wrapper form textarea {
+.quote-wrapper form input,
+.quote-wrapper form textarea {
   all: unset;
   font-size: 22px;
   border: 4px solid #121B32;
@@ -389,7 +401,8 @@ header .right span span.active {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-1600px); /* Adjust based on the number of images */
+    transform: translateX(-1600px);
+    /* Adjust based on the number of images */
   }
 }
 @keyframes fadeIn {

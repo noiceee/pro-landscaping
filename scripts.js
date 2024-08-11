@@ -38,13 +38,10 @@ document.addEventListener("DOMContentLoaded", function () {
       e.stopPropagation();
     });
 
-    const servicesButton = document.querySelector(".our-services");
+  const servicesButton = document.querySelector(".our-services");
   if (servicesButton) {
     servicesButton.addEventListener("click", function () {
       window.location.href = "services.html";
     });
   }
-
-  
-
 });

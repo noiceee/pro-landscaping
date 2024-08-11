@@ -13,6 +13,7 @@
 body {
   background-color: #ffffff;
   font-family: "SatoshiVariable", Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 header {
