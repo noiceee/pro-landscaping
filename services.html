@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Landscaping and Fencing</title>
+    <link rel="stylesheet" href="services.css">
+</head>
+
+<body>
+    <nav>
+        <header>
+            <div class="logo">
+                <img src="logo.png" alt="logo" srcset="">
+                <span>PRO LANDSCAPING & FENCING</span>
+            </div>
+            <div class="right">
+                <a href="index.html">
+                    <span id="home">Home<span >.</span></span>
+                </a>
+                <a href="services.html">
+                    <span id="services">Services<span class="active">.</span></span>
+                </a>
+                <a href="testimonials.html">
+                    <span id="testimonials">Testimonials<span>.</span></span>
+                </a>
+                <a href="contactus.html">
+                    <span id="contactus">Contact Us</span>
+                </a>
+            </div>
+        </header>
+
+
+        <section id="services-top">
+            <div class="servicetype">
+                <button class="servicebutton active">Landscaping</button>
+                <button class="servicebutton">Retaining Walls</button>
+                <button class="servicebutton">Fencing</button>
+                <button class="servicebutton">Concreting</button>
+            </div>
+        </section>
+
+        <section id="landscaping">
+            <div class="grid-container">
+                <div class="grid-item item1">
+                    <h3>
+                        Landscaping transforms ordinary <br> spaces into extraordinary places,<br> where every tree,
+                        plant and stone<br> is carefully chosen to evoke a <br>specific mood or ambience.
+                    </h3>
+                </div>
+                <div class="grid-item item2">
+                    <img src="landscaping1.png" alt="">
+                </div>
+            </div>
+
+            <div class="grid-container1">
+
+                <div class="item3">
+                    <img src="landscaping2.png" alt="">
+                </div>
+
+                <div class="item4">
+                    <img src="landscaping3.png" alt="">
+                </div>
+
+                <div class="item5">
+                    <p>It's about blending elements like <br>color, texture, and form to craft<br> environments that inspire and<br>
+                        rejuvenate.</p>
+                </div>
+
+            </div>
+
+            <div class="item6">
+                <img src="landscaping4.png" alt="">
+            </div>
+
+            <div class="landscapingservices">
+                <h3> Our <br> landscaping <br> services:  </h3>
+                    <ul>
+                        <li> All types of Decking </li>
+                        <li> Paving </li>
+                        <li>Landscaping designs & Ideas</li>
+                        <li> Irrigation</li>
+                        <li>Planting and Gardens</li>
+                        <li>Pergolas</li>
+                        <li>Garden Beds</li>
+                    </ul>
+               
+            </div>
+
+            <div class="landscaping-end">
+                <div class="item7">
+                    <img src="landscaping7.png" alt="">
+                </div>
+                <div class="item8">
+                    <img src="landscaping8.png" alt="">
+                </div>
+                <div class="item9">
+                    <img src="landscaping9.png" alt="">
+                </div>
+                <div class="item10">
+                    <img src="landscaping10.png" alt="">
+                </div>
+            </div>
+
+        </section>
+
+
+        <div id="footer-placeholder"></div>
+        <script src="scripts.js"> </script>
+
+        <script>        
+        document.addEventListener("DOMContentLoaded", function () {
+                    // Load footer from footer.html
+                    fetch('footer.html')
+                        .then(response => response.text())
+                        .then(data => {
+                            document.getElementById('footer-placeholder').innerHTML = data;
+                        });
+                });
+        </script>
+</body>
+
+</html>

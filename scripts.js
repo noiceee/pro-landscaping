@@ -4,9 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Map URL paths to span IDs
   const pageMap = {
-    "/": "home",
-    "/services": "services",
-    "/testimonials": "testimonials",
+    "index.html": "home",
+    "services": "services",
+    "testimonials": "testimonials",
+    "contactus.html": "contactus"
   };
 
   // Get the corresponding span ID for the current page
@@ -36,5 +37,14 @@ document.addEventListener("DOMContentLoaded", function () {
     .addEventListener("click", function (e) {
       e.stopPropagation();
     });
+
+    const servicesButton = document.querySelector(".our-services");
+  if (servicesButton) {
+    servicesButton.addEventListener("click", function () {
+      window.location.href = "services.html";
+    });
+  }
+
+  
 
 });

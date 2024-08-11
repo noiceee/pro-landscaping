@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Landscaping and Fencing</title>
+    <link rel="stylesheet" href="testimonials.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="logo" srcset="">
+            <span>PRO LANDSCAPING & FENCING</span>
+        </div>
+        <div class="right">
+            <a href="index.html">
+                <span id="home">Home<span>.</span></span>
+            </a>
+            <a href="services.html">
+                <span id="services">Services<span>.</span></span>
+            </a>
+            <a href="testimonials/.html">
+                <span id="testimonials">Testimonials<span class="active">.</span></span>
+            </a>
+            <a href="contactus.html">
+                <span id="contactus">Contact Us</span>
+            </a>
+        </div>
+    </header>
+
+    <section id="testimonial-top">
+        <h1>
+            At Pro Landscaping & Fencing, our mission is to <br>provide a seamless and enjoyable experience from <br>
+            initial contact to project completion and beyond.
+        </h1>
+        <h2>
+            We are committed to understanding our customers' needs, preferences, and concerns, and to exceeding their
+            expectations at every interaction.
+        </h2>
+
+        <div class="item1">
+            <img src="testimonial1.png" alt="">
+        </div>
+
+        <p>Our dedicated team strives to deliver prompt, courteous, and <br> transparent communication, ensuring that
+            our clients feel valued,<br> informed and supporters through the entire process.</p>
+
+    </section>
+
+    <section id="testimonial-mid">
+        <div class="main-grid">
+            <div class="grid-container">
+                <div class="image-left">
+                    <img src="testimonial2.png" alt="">
+                </div>
+
+                <div class="text-center">
+                    <p> We take pride in our <br> responsiveness, <br> professionalism, and <br> attention to detail
+                        and<br> are relentless in our<br> pursuit of customer<br> satisfaction.</p>
+                </div>
+            </div>
+            <div class="image-right1"> <img src="testimonial3.png" alt=""> </div>
+            <div class="image-right2"> <img src="testimonial4.png" alt=""> </div>
+        </div>
+    </section>
+
+    <section id="testimonial-end">
+        
+        <div class="main-grid">
+        <div class="text1">
+            <p> At Pro Landscaping & Fencing exceptional service <br> isn’t just a promise, it’s our passion.</p>
+        </div>
+
+        <div class="grid-container">
+            <div class="grid-text1"><p>What our <br>customers <br>say</p></div>
+            <div class="grid-item">
+                <div class="video-text">Customer Review 1</div>
+                <video src="video1.mp4" controls></video>
+            </div>
+            <div class="grid-item">
+                <div class="video-text">Customer Review 2</div>
+                <video src="video1.mp4" controls></video>
+            </div>
+            <div class="grid-item">
+                <div class="video-text">Customer Review 3</div>
+                <video src="video1.mp4" controls></video>
+            </div>
+            <div class="grid-item">
+                <div class="video-text">Customer Review 4</div>
+                <video src="video1.mp4" controls></video>
+            </div>
+            <div class="grid-item">
+                <div class="video-text">Customer Review 5</div>
+                <video src="video1.mp4" controls></video>
+            </div>
+            <div class="grid-item">
+                <div class="video-text">Customer Review 6</div>
+                <video src="video1.mp4" controls></video>
+            </div>
+            <div class="grid-item">
+                <div class="video-text">Customer Review 7</div>
+                <video src="video1.mp4" controls></video>
+            </div>
+            <div class="grid-text2"><p>Watch more on <br> our social media</p></div>
+        </div>
+        
+        </div>
+    </section>
+
+    
+    <div id="footer-placeholder"></div>
+    <script src="scripts.js"> </script>
+
+    <script>        
+    document.addEventListener("DOMContentLoaded", function () {
+                // Load footer from footer.html
+                fetch('footer.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('footer-placeholder').innerHTML = data;
+                    });
+            });
+    </script>
+
+</body>
+</html>

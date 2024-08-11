@@ -1,0 +1,377 @@
+@font-face {
+  font-family: "SatoshiVariable";
+  src: url("fonts/Satoshi-Variable.ttf") format("truetype");
+  font-weight: 100 900; // Using variable font syntax for weight range
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: "SatoshiVariable", Helvetica, sans-serif;
+}
+
+header {
+  height: 96px;
+  width: 100%;
+  background-color: white;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 5%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 24px;
+    gap: 10px;
+
+    img {
+      height: 60px;
+    }
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 18px;
+
+    a {
+      text-decoration: none;
+      color: unset;
+    }
+
+    #contactus {
+      font-weight: 600;
+      padding: 10px 20px;
+      background-color: black;
+      border-radius: 21px;
+      color: #ffffff;
+      transition: transform 0.3s ease;
+      word-break: nowrap;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    span {
+      position: relative;
+      font-weight: 500;
+
+      span {
+        display: none;
+
+        &.active {
+          display: inline;
+          font-weight: 900;
+          position: absolute;
+          top: 8px;
+          left: 50%;
+        }
+      }
+    }
+  }
+}
+
+#services-top {
+  background-color: #f4f4f4;
+  // font-family: "SatoshiVariable", sans-serif;
+  // font-weight: 900;
+  padding: 15px;
+  /* Adjust padding to your preference */
+  border-radius: 100px;
+  margin-top: 175px;
+  /* Adjust spacing from the top */
+  max-width: 800px;
+  /* Adjust the maximum width */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  /* Center-align text and inline elements */
+}
+
+.servicebutton {
+  background: none;
+  /* Remove default button background */
+  border: none;
+  /* Remove the border */
+  border-radius: 5px;
+  /* Round the corners */
+  font-family: "SatoshiVariable", sans-serif;
+  font-weight: 500;
+  color: #535a6a;
+  /* Text color */
+  font-size: 24px;
+  /* Adjust font size */
+  font-weight: normal;
+  padding: 10px 25px;
+  /* Padding inside the button */
+  cursor: pointer;
+  /* Pointer cursor on hover */
+  margin: 5px;
+  /* Space around buttons */
+  transition: background-color 0.3s, color 0.3s;
+  /* Smooth hover effects */
+}
+
+.servicebutton.active {
+  background-color: #050f27;
+  /* Active button background */
+  border-radius: 30px;
+  color: #fff;
+  /* Active button text color */
+}
+
+#landscaping {
+  padding: 10% 8% 5%;
+
+
+  .grid-container {
+    display: grid;
+    // grid-template-rows: auto auto; /* Two rows of equal height */
+    grid-template-columns: 3fr 3fr 1fr 3fr;
+    /* First row: 60% for first column, 30% for second column, 10% for third column */
+    column-gap: 16px;
+    row-gap: 36px;
+    /* Optional: Adds a gap between grid items */
+    grid-auto-rows: 400px;
+
+    img {
+      // width: 100%;
+
+      height: 608px;
+      width: 488px;
+    }
+
+    .grid-item {
+      //   border: 1px solid #ccc;
+      border-radius: 40px;
+      overflow: hidden;
+    }
+
+
+    .item1 {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      // background-color: #f4f4f4;
+      grid-column: span 2;
+      padding: 40px;
+    }
+
+    .item2 {
+      grid-column: span 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        // transform: scale(0.8);
+        height: 90%;
+        width: auto;
+      }
+    }
+
+    h3 {
+      line-height: 1.1;
+      letter-spacing: -1px;
+      font-size: 275%;
+      font-weight: 600;
+    }
+  }
+
+  .grid-container1 {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    /* Adjust the first column to be larger */
+    grid-template-rows: auto;
+    /* Adjust rows based on content */
+    gap: 30px;
+    /* Gap between grid items */
+    max-width: 1200px;
+    /* Set a maximum width for the grid */
+    width: 100%;
+    /* Make sure the grid takes up the full width within its container */
+    padding: 50px 0;
+    /* Padding on top and bottom only */
+    box-sizing: border-box;
+    /* Include padding in the element's total width and height */
+  }
+
+  .item3 {
+    grid-column: 1 / 2;
+    /* First column */
+    grid-row: 1 / 2;
+    /* First row */
+    align-self: start;
+    /* Align at the start of the grid cell */
+    justify-self: start;
+    /* Align to the start of the grid cell */
+    width: 100%;
+    /* Use full width of the grid cell */
+    height: auto;
+    /* Maintain the aspect ratio */
+  }
+
+  .item3 img {
+    width: 100%;
+    /* Make the image fit within the defined size of .item3 */
+    height: auto;
+    /* Keep the image's aspect ratio */
+    max-height: 90%;
+    /* Limit the maximum height */
+    border-radius: 10px;
+  }
+
+  .item4 {
+    grid-column: 2 / 3;
+    /* Second column */
+    grid-row: 1 / 3;
+    /* Spans both rows */
+    align-self: start;
+    /* Align at the start of the grid cell */
+    justify-self: start;
+    /* Align to the start of the grid cell */
+    width: 100%;
+    /* Use full width of the grid cell */
+    height: auto;
+    /* Maintain the aspect ratio */
+    margin-left: 50px;
+    /* Add margin to move it to the right */
+  }
+
+  .item4 img {
+    width: 100%;
+    height: auto;
+    max-height: 90%;
+    border-radius: 10px;
+  }
+
+  .item5 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    align-self: center;
+    justify-self: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .grid-container1 img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .item5 p {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0;
+    padding: 20px;
+    /* Equal padding on all sides */
+    background-color: #f5f5f5;
+    border-radius: 60px;
+  }
+
+
+  .item6 {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; // Ensure the image covers the container
+      display: block; // Remove any extra space around the image
+    }
+  }
+
+  .landscapingservices {
+    h3 {
+      line-height: 1.1;
+      letter-spacing: -1px;
+      font-size: 350%;
+      font-weight: 700;
+      margin-top: 40px;
+    }
+
+    ul {
+      font-size: 250%;
+      margin-top: 45px;
+      line-height: 1.6;
+      margin-left: 45px;
+      font-weight: 400;
+    }
+  }
+
+  .landscaping-end {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px 0;
+    box-sizing: border-box;
+  }
+
+  .item7 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+  }
+
+  .item8 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  .item9 {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+  }
+
+  .item10 {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+  }
+
+  .item7 img {
+    width: 100%;
+    height: auto;
+    max-height: 90%;
+    border-radius: 10px;
+  }
+
+  .item8 img {
+    width: 100%;
+    height: auto;
+    max-height: 90%;
+    border-radius: 10px;
+  }
+
+  .item9 img {
+    width: 100%;
+    height: auto;
+    max-height: 90%;
+    border-radius: 10px;
+  }
+
+  .item10 img {
+    width: 100%;
+    height: auto;
+    max-height: 90%;
+    border-radius: 10px;
+  }
+
+}
