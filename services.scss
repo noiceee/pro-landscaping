@@ -37,7 +37,7 @@ header {
     font-weight: 600;
     font-size: 24px;
     gap: 10px;
-
+    pointer-events: none;
     img {
       height: 60px;
     }
@@ -198,7 +198,7 @@ header {
 
   .grid-container1 {
     display: grid;
-    grid-template-columns: 1.6fr 1fr;
+    grid-template-columns: 1.8fr 1fr;
     /* Adjust the first column to be larger */
     grid-template-rows: auto;
     /* Adjust rows based on content */

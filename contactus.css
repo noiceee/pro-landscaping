@@ -36,6 +36,7 @@ header .logo {
   font-weight: 600;
   font-size: 24px;
   gap: 10px;
+  pointer-events: none;
 }
 header .logo img {
   height: 60px;

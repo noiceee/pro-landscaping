@@ -37,7 +37,7 @@ header {
     font-weight: 600;
     font-size: 24px;
     gap: 10px;
-
+    pointer-events: none;
     img {
       height: 60px;
     }
@@ -222,6 +222,31 @@ header {
     width: 100%; /* Full width of the page */
     margin: 0 auto; /* Center the container */
     padding: 70px;
+    .grid-item{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: white;
+      border-radius: 24px;
+      padding: 16px;
+      .testimonial-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        img{
+          height: 40px;
+          width: fit-content;
+          &:nth-of-type(2){
+            transform: rotate(180deg);
+            align-self: flex-end;
+          }
+        }
+      }
+      .video-text{
+        font-weight: 600;
+        margin-left: 10px;
+      }
+    }
   }
 
   .grid-text1 {
@@ -257,7 +282,7 @@ header {
 video {
     width: 100%;
     height: auto;
-    border-radius: 20px;
+    border-radius: 30px;
     padding: 10px;
     max-width: 150px;
 }
