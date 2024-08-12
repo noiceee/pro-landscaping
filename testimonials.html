@@ -21,7 +21,7 @@
             <a href="services.html">
                 <span id="services">Services<span>.</span></span>
             </a>
-            <a href="testimonials/.html">
+            <a href="testimonials.html">
                 <span id="testimonials">Testimonials<span class="active">.</span></span>
             </a>
             <a href="contactus.html">
@@ -142,18 +142,47 @@
 
     
     <div id="footer-placeholder"></div>
-    <script src="scripts.js"> </script>
+
+    
+    <div class="quote-wrapper hidden">
+        <form action="" method="post">
+            <h1>Get a Quote</h1>
+            <input type="text" name="name" id="name" placeholder="Name" required>
+            <input type="email" name="email" id="email" placeholder="Email" required>
+            <input type="number" name="contact" id="contact" placeholder="Contact" required>
+            <input type="text" name="suburb" id="suburb" placeholder="Suburb" required>
+            <textarea type="text" name="enquiry" id="enquiry" placeholder="Enquiry" required></textarea>
+            <button type="submit" class="submit-quote">Submit</button>
+        </form>
+    </div>
 
     <script>        
     document.addEventListener("DOMContentLoaded", function () {
                 // Load footer from footer.html
                 fetch('footer.html')
-                    .then(response => response.text())
-                    .then(data => {
-                        document.getElementById('footer-placeholder').innerHTML = data;
-                    });
-            });
-    </script>
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                    document.querySelectorAll(".get-quote-button").forEach(button => {
+                        button.addEventListener("click", function () {
+                            console.log("clicked")
+                            document.querySelector(".quote-wrapper").classList.remove("hidden");
+                        });
+                    })
+                    document
+                        .querySelector(".quote-wrapper")
+                        .addEventListener("click", function (e) {
+                        document.querySelector(".quote-wrapper").classList.add("hidden");
+                        });
 
+                    document
+                        .querySelector(".quote-wrapper>form")
+                        .addEventListener("click", function (e) {
+                        e.stopPropagation();
+                        });
+                });
+        });
+        </script>
+        <script src="scripts.js"></script>
 </body>
 </html>

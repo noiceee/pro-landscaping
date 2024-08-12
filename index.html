@@ -110,10 +110,6 @@
             <button type="submit" class="submit-quote">Submit</button>
         </form>
     </div>
-
-    
-
-    <script src="scripts.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
         fetch('footer.html')
@@ -146,11 +142,29 @@
     document.addEventListener("DOMContentLoaded", function () {
                 // Load footer from footer.html
                 fetch('footer.html')
-                    .then(response => response.text())
-                    .then(data => {
-                        document.getElementById('footer-placeholder').innerHTML = data;
-                    });
-            });
-    </script>
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                    document.querySelectorAll(".get-quote-button").forEach(button => {
+                        button.addEventListener("click", function () {
+                            console.log("clicked")
+                            document.querySelector(".quote-wrapper").classList.remove("hidden");
+                        });
+                    })
+                    document
+                        .querySelector(".quote-wrapper")
+                        .addEventListener("click", function (e) {
+                        document.querySelector(".quote-wrapper").classList.add("hidden");
+                        });
+
+                    document
+                        .querySelector(".quote-wrapper>form")
+                        .addEventListener("click", function (e) {
+                        e.stopPropagation();
+                        });
+                });
+        });
+        </script>
+        <script src="scripts.js"></script>
 </body>
 </html>

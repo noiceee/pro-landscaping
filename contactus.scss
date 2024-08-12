@@ -155,3 +155,82 @@ header {
     }
 
 }
+
+
+.quote-wrapper {
+    overflow: hidden;
+    transition: all .2s ease;
+    background-color: rgba(61, 61, 61, 0.845);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    visibility: visible;
+    animation: fadeIn .1s forwards;
+  
+    h1 {
+      margin-bottom: 10px;
+    }
+    
+    &.hidden {
+      opacity: 0;
+      visibility: hidden;
+      animation: fadeOut .1s forwards;
+    }
+  
+    button {
+      background-color: #37415d;
+      border-radius: 60px;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .3s ease;
+  
+      &:hover {
+        background-color: #20315c;
+        transform: scale(1.1);
+      }
+    }
+  
+    form {
+      width: min(460px, 90%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 50px 45px;
+      background-color: white;
+      border-radius: 60px;
+      gap: 10px;
+  
+      input,
+      textarea {
+        all: unset;
+        font-size: 22px;
+        border: 4px solid #121B32;
+        border-radius: 22px;
+        color: black;
+        padding: 10px 16px;
+        width: 100%;
+      }
+  
+      #enquiry {
+        height: 140px;
+        text-align: start;
+      }
+  
+      button {
+        padding: 24px 48px;
+        height: fit-content;
+        width: fit-content;
+        font-size: 22px;
+        margin-top: 16px;
+      }
+    }
+  }
