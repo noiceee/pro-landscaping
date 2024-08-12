@@ -79,7 +79,7 @@ header .right span span.active {
 }
 
 #contact-top {
-  padding: 5% 0%;
+  padding: 5% 0% 2% 0%;
   text-align: center;
   margin-top: 96px;
 }
@@ -98,7 +98,7 @@ header .right span span.active {
   background-color: #050F27;
   /* Dark blue background */
   border-radius: 40px;
-  flex-basis: 60%;
+  flex-basis: 100%;
   padding: 40px;
   /* Add padding to ensure content is not touching the border */
   margin: 0;

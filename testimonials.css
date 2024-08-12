@@ -244,11 +244,30 @@ header .right span span.active {
   grid-column: 3/4;
   grid-row: 3/4;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   font-weight: 500;
   font-size: 24px;
+}
+#testimonial-end .grid-text2 p {
+  margin-bottom: 15px;
+}
+#testimonial-end .grid-text2 button {
+  padding: 10px 20px;
+  font-family: "SatoshiVariable";
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #050F27;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#testimonial-end .grid-text2 button:hover {
+  background-color: #414d5a;
 }
 #testimonial-end video {
   width: 100%;
