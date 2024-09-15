@@ -1,19 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Get the current page URL path
-  const currentPage = window.location.pathname;
-
-  // Map URL paths to span IDs
   const pageMap = {
     "index.html": "home",
-    "services": "services",
-    "testimonials": "testimonials",
-    "contactus.html": "contactus"
+    "services.html": "services",
+    "testimonials.html": "testimonials",
+    "contactus.html": "contactus",
+    "/index.html": "home",
+    "/services.html": "services",
+    "/testimonials.html": "testimonials",
+    "/contactus.html": "contactus"
   };
-
-  // Get the corresponding span ID for the current page
+  
+  // Get the current page from the window object
+  const currentPage = window.location.pathname; // e.g., "/index.html"
+  
+  // Check the current page and log to debug
+  console.log('Current Page:', currentPage);
   const activePageId = pageMap[currentPage];
+  console.log('Active Page ID:', activePageId);
 
-  // If the current page has a corresponding span ID, add the 'active' class
   if (activePageId) {
     document.getElementById(activePageId).classList.add("active");
   }

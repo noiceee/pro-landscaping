@@ -41,11 +41,34 @@ header .logo {
 header .logo img {
   height: 60px;
 }
+header .hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+header .hamburger .line {
+  width: 32px;
+  height: 4px;
+  background-color: black;
+}
+@media screen and (min-width: 980px) {
+  header .hamburger {
+    display: none;
+  }
+}
 header .right {
   display: flex;
   align-items: center;
   gap: 30px;
   font-size: 18px;
+}
+@media screen and (max-width: 980px) {
+  header .right.right-horz {
+    display: none;
+  }
 }
 header .right a {
   text-decoration: none;
@@ -124,6 +147,40 @@ header .right span span.active {
   border-radius: 30px;
   color: #fff;
   /* Active button text color */
+}
+
+.new-img {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.right-panel {
+  display: flex;
+  min-height: 100vh;
+  width: min(90%, 340px);
+  background-color: white;
+  position: fixed;
+  z-index: 10;
+  box-shadow: -8px 0px 16px 0px hwb(0 36% 64%/0.274);
+  right: 0px;
+  top: 0px;
+  display: flex;
+  text-align: left;
+  align-items: flex-start;
+  gap: 20px;
+  padding-top: 80px;
+  flex-direction: column;
+  display: none !important;
+}
+.right-panel svg {
+  height: 36px;
+  position: absolute;
+  left: -70px;
+  top: 40px;
+  cursor: pointer;
+}
+.right-panel.visible {
+  display: flex !important;
 }
 
 #landscaping {
@@ -283,7 +340,7 @@ header .right span span.active {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto;
   gap: 30px;
-  max-width: 1200px;
+  max-width: 98%;
   width: 100%;
   padding: 20px 0;
   box-sizing: border-box;

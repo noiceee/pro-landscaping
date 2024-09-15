@@ -41,11 +41,34 @@ header .logo {
 header .logo img {
   height: 60px;
 }
+header .hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+header .hamburger .line {
+  width: 32px;
+  height: 4px;
+  background-color: black;
+}
+@media screen and (min-width: 980px) {
+  header .hamburger {
+    display: none;
+  }
+}
 header .right {
   display: flex;
   align-items: center;
   gap: 30px;
   font-size: 18px;
+}
+@media screen and (max-width: 980px) {
+  header .right.right-horz {
+    display: none;
+  }
 }
 header .right a {
   text-decoration: none;
@@ -136,6 +159,35 @@ header .right span span.active {
   border-radius: 35px;
   border: 4px solid #050F27;
   /* Complete border property */
+}
+
+.right-panel {
+  display: flex;
+  min-height: 100vh;
+  width: min(90%, 340px);
+  background-color: white;
+  position: fixed;
+  z-index: 10;
+  box-shadow: -8px 0px 16px 0px hwb(0 36% 64%/0.274);
+  right: 0px;
+  top: 0px;
+  display: flex;
+  text-align: left;
+  align-items: flex-start;
+  gap: 20px;
+  padding-top: 80px;
+  flex-direction: column;
+  display: none;
+}
+.right-panel svg {
+  height: 36px;
+  position: absolute;
+  left: -70px;
+  top: 40px;
+  cursor: pointer;
+}
+.right-panel.visible {
+  display: flex !important;
 }
 
 .quote-wrapper {
