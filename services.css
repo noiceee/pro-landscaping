@@ -265,7 +265,6 @@ header .right span span.active {
   /* Keep the image's aspect ratio */
   max-height: 90%;
   /* Limit the maximum height */
-  border-radius: 10px;
 }
 #landscaping .item4 {
   grid-column: 2/3;
@@ -287,7 +286,6 @@ header .right span span.active {
   width: 100%;
   height: auto;
   max-height: 90%;
-  border-radius: 10px;
 }
 #landscaping .item5 {
   grid-column: 1/2;
@@ -300,7 +298,6 @@ header .right span span.active {
 #landscaping .grid-container1 img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
 }
 #landscaping .item5 p {
   align-items: center;
@@ -358,35 +355,38 @@ header .right span span.active {
   grid-column: 3/4;
   grid-row: 1/2;
 }
+#landscaping .item9 img {
+  width: 100%;
+  max-height: 280px !important;
+  border-radius: 40px !important;
+}
 #landscaping .item10 {
   grid-column: 2/4;
   grid-row: 2/3;
 }
-#landscaping .item7 img {
+#landscaping .item10 img {
   width: 100%;
-  height: 95%;
+}
+#landscaping .item7 img {
+  width: fit-content;
+  height: 90%;
   max-height: 100%;
-  border-radius: 10px;
+  border-radius: 24px;
 }
 #landscaping .item8 img {
   width: 100%;
-  height: auto;
-  max-height: 90%;
-  border-radius: 10px;
+  height: 95%;
   margin-left: 30px;
 }
 #landscaping .item9 img {
   width: 100%;
   height: auto;
   max-height: 90%;
-  border-radius: 10px;
   margin-left: 50px;
 }
 #landscaping .item10 img {
-  width: 102%;
+  width: 100%;
   height: auto;
-  max-height: 90%;
-  border-radius: 10px;
   margin-left: 30px;
 }
 
