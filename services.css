@@ -10,10 +10,16 @@
   padding: 0px;
 }
 
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 body {
   background-color: #ffffff;
   font-family: "SatoshiVariable", Helvetica, sans-serif;
   overflow-x: hidden;
+  width: 100vw;
 }
 
 header {
@@ -30,6 +36,13 @@ header {
   top: 0px;
   left: 0px;
 }
+@media screen and (max-width: 980px) {
+  header {
+    height: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 header .logo {
   display: flex;
   align-items: center;
@@ -38,20 +51,30 @@ header .logo {
   gap: 10px;
   pointer-events: none;
 }
+@media screen and (max-width: 980px) {
+  header .logo {
+    font-size: 18px;
+  }
+}
 header .logo img {
   height: 60px;
+}
+@media screen and (max-width: 980px) {
+  header .logo img {
+    height: 40px;
+  }
 }
 header .hamburger {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
   cursor: pointer;
 }
 header .hamburger .line {
-  width: 32px;
-  height: 4px;
+  width: 24px;
+  height: 3px;
   background-color: black;
 }
 @media screen and (min-width: 980px) {
@@ -115,6 +138,23 @@ header .right span span.active {
   text-align: center;
   /* Center-align text and inline elements */
 }
+@media screen and (max-width: 980px) {
+  #services-top {
+    margin-top: 90px;
+    width: 90%;
+    border-radius: 40px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .servicetype {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
 
 .servicebutton {
   background: none;
@@ -140,6 +180,11 @@ header .right span span.active {
   text-decoration: none;
   /* Smooth hover effects */
 }
+@media screen and (max-width: 980px) {
+  .servicebutton {
+    font-size: 22px;
+  }
+}
 
 .servicebutton.active {
   background-color: #050f27;
@@ -147,6 +192,11 @@ header .right span span.active {
   border-radius: 30px;
   color: #fff;
   /* Active button text color */
+}
+@media screen and (max-width: 980px) {
+  .servicebutton.active {
+    width: 100%;
+  }
 }
 
 .new-img {
@@ -195,6 +245,12 @@ header .right span span.active {
   /* Optional: Adds a gap between grid items */
   grid-auto-rows: 400px;
 }
+@media screen and (max-width: 980px) {
+  #landscaping .grid-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
 #landscaping .grid-container img {
   height: 608px;
   width: 488px;
@@ -210,6 +266,11 @@ header .right span span.active {
   justify-content: space-between;
   grid-column: span 2;
   padding: 40px;
+}
+@media screen and (max-width: 980px) {
+  #landscaping .grid-container .item1 {
+    padding: 10px;
+  }
 }
 #landscaping .grid-container .item2 {
   grid-column: span 2;
@@ -227,6 +288,11 @@ header .right span span.active {
   font-size: 275%;
   font-weight: 600;
 }
+@media screen and (max-width: 980px) {
+  #landscaping .grid-container h3 {
+    font-size: 160%;
+  }
+}
 #landscaping .grid-container1 {
   display: grid;
   grid-template-columns: 1.8fr 1fr;
@@ -243,6 +309,13 @@ header .right span span.active {
   /* Padding on top and bottom only */
   box-sizing: border-box;
   /* Include padding in the element's total width and height */
+}
+@media screen and (max-width: 980px) {
+  #landscaping .grid-container1 {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0px;
+  }
 }
 #landscaping .item3 {
   grid-column: 1/2;
@@ -281,6 +354,11 @@ header .right span span.active {
   /* Maintain the aspect ratio */
   margin-left: 50px;
   /* Add margin to move it to the right */
+}
+@media screen and (max-width: 980px) {
+  #landscaping .item4 {
+    margin-left: 0px;
+  }
 }
 #landscaping .item4 img {
   width: 100%;
@@ -325,12 +403,22 @@ header .right span span.active {
   font-weight: 700;
   margin-top: 40px;
 }
+@media screen and (max-width: 980px) {
+  #landscaping .landscapingservices h3 {
+    font-size: 250%;
+  }
+}
 #landscaping .landscapingservices ul {
   font-size: 250%;
   margin-top: 45px;
   line-height: 1.6;
   margin-left: 45px;
   font-weight: 400;
+}
+@media screen and (max-width: 980px) {
+  #landscaping .landscapingservices ul {
+    font-size: 180%;
+  }
 }
 #landscaping .landscaping-end {
   display: grid;
@@ -342,6 +430,13 @@ header .right span span.active {
   padding: 20px 0;
   box-sizing: border-box;
   margin-top: 50px;
+}
+@media screen and (max-width: 980px) {
+  #landscaping .landscaping-end {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+  }
 }
 #landscaping .item7 {
   grid-column: 1/2;
@@ -373,10 +468,21 @@ header .right span span.active {
   max-height: 100%;
   border-radius: 24px;
 }
+@media screen and (max-width: 980px) {
+  #landscaping .item7 img {
+    width: 100%;
+    height: 95%;
+  }
+}
 #landscaping .item8 img {
   width: 100%;
   height: 95%;
   margin-left: 30px;
+}
+@media screen and (max-width: 980px) {
+  #landscaping .item8 img {
+    margin-left: 0px;
+  }
 }
 #landscaping .item9 img {
   width: 100%;
@@ -384,10 +490,20 @@ header .right span span.active {
   max-height: 90%;
   margin-left: 50px;
 }
+@media screen and (max-width: 980px) {
+  #landscaping .item9 img {
+    margin-left: 0px;
+  }
+}
 #landscaping .item10 img {
   width: 100%;
   height: auto;
   margin-left: 30px;
+}
+@media screen and (max-width: 980px) {
+  #landscaping .item10 img {
+    margin-left: 0px;
+  }
 }
 
 .quote-wrapper {
