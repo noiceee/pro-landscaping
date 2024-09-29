@@ -11,10 +11,16 @@
   padding: 0px;
 }
 
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 body {
   background-color: #ffffff;
   font-family: "SatoshiVariable", Helvetica, sans-serif;
   overflow-x:hidden;
+  width: 100vw;
 }
 
 header {
@@ -30,6 +36,11 @@ header {
   position: fixed;
   top: 0px;
   left: 0px;
+  @media screen and (max-width: 980px) {
+    height: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 
   .logo {
     display: flex;
@@ -38,8 +49,14 @@ header {
     font-size: 24px;
     gap: 10px;
     pointer-events: none;
+    @media screen and (max-width: 980px) {
+      font-size: 18px;
+    }
     img {
       height: 60px;
+      @media screen and (max-width: 980px) {
+        height: 40px;
+      }
     }
   }
 
@@ -48,11 +65,11 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 6px;
+    gap: 4px;
     cursor: pointer;
     .line {
-      width: 32px;
-      height: 4px;
+      width: 24px;
+      height: 3px;
       background-color: black;
     }
     @media screen and (min-width: 980px) {
@@ -126,6 +143,21 @@ header {
   margin-right: auto;
   text-align: center;
   /* Center-align text and inline elements */
+  @media screen and (max-width: 980px) {
+    margin-top: 90px;
+    width: 90%;
+    border-radius: 40px;
+  }
+}
+
+.servicetype{
+  @media screen and (max-width: 980px) {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .servicebutton {
@@ -151,6 +183,9 @@ header {
   transition: background-color 0.3s, color 0.3s;
   text-decoration: none;
   /* Smooth hover effects */
+  @media screen and (max-width: 980px) {
+    font-size: 22px;
+  }
 }
 
 .servicebutton.active {
@@ -159,6 +194,9 @@ header {
   border-radius: 30px;
   color: #fff;
   /* Active button text color */
+  @media screen and (max-width: 980px) {
+    width: 100%;
+  }
 }
 
 .new-img {
@@ -209,7 +247,10 @@ header {
     row-gap: 36px;
     /* Optional: Adds a gap between grid items */
     grid-auto-rows: 400px;
-
+    @media screen and (max-width: 980px) {
+      display: flex;
+      flex-direction: column;
+    }
     img {
       // width: 100%;
 
@@ -232,6 +273,9 @@ header {
       // background-color: #f4f4f4;
       grid-column: span 2;
       padding: 40px;
+      @media screen and (max-width: 980px) {
+        padding: 10px;
+      }
     }
 
     .item2 {
@@ -252,6 +296,9 @@ header {
       letter-spacing: -1px;
       font-size: 275%;
       font-weight: 600;
+      @media screen and (max-width: 980px) {
+        font-size: 160%;
+      }
     }
   }
 
@@ -271,6 +318,11 @@ header {
     /* Padding on top and bottom only */
     box-sizing: border-box;
     /* Include padding in the element's total width and height */
+    @media screen and (max-width: 980px) {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 0px;
+    }
   }
 
   .item3 {
@@ -312,6 +364,9 @@ header {
     /* Maintain the aspect ratio */
     margin-left: 50px;
     /* Add margin to move it to the right */
+    @media screen and (max-width: 980px) {
+      margin-left: 0px;
+    }
   }
 
   .item4 img {
@@ -365,6 +420,9 @@ header {
       font-size: 350%;
       font-weight: 700;
       margin-top: 40px;
+      @media screen and (max-width: 980px) {
+        font-size: 250%;
+      }
     }
 
     ul {
@@ -373,6 +431,9 @@ header {
       line-height: 1.6;
       margin-left: 45px;
       font-weight: 400;
+      @media screen and (max-width: 980px) {
+        font-size: 180%;
+      }
     }
   }
 
@@ -386,6 +447,11 @@ header {
     padding: 20px 0;
     box-sizing: border-box;
     margin-top: 50px;
+    @media screen and (max-width: 980px) {
+      display: flex;
+      flex-direction: column;
+      margin-top: 0px;
+    }
   }
 
   .item7 {
@@ -421,12 +487,19 @@ header {
     height: 90%;
     max-height: 100%;
     border-radius: 24px;
+    @media screen and (max-width: 980px) {
+      width: 100%;
+      height: 95%;
+    }
   }
 
   .item8 img {
     width: 100%;
     height: 95%;
     margin-left: 30px;
+    @media screen and (max-width: 980px) {
+      margin-left: 0px;
+    }
   }
 
   .item9 img {
@@ -434,14 +507,18 @@ header {
     height: auto;
     max-height: 90%;
     margin-left: 50px;
-
+    @media screen and (max-width: 980px) {
+      margin-left: 0px;
+    }
   }
 
   .item10 img {
     width: 100%;
     height: auto;
     margin-left: 30px;
-
+    @media screen and (max-width: 980px) {
+      margin-left: 0px;
+    }
   }
 
 }

@@ -11,10 +11,16 @@
   padding: 0px;
 }
 
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 body {
   background-color: #ffffff;
   font-family: "SatoshiVariable", Helvetica, sans-serif;
-  overflow-x: hidden;
+  overflow-x:hidden;
+  width: 100vw;
 }
 
 header {
@@ -30,6 +36,11 @@ header {
   position: fixed;
   top: 0px;
   left: 0px;
+  @media screen and (max-width: 980px) {
+    height: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 
   .logo {
     display: flex;
@@ -38,20 +49,27 @@ header {
     font-size: 24px;
     gap: 10px;
     pointer-events: none;
+    @media screen and (max-width: 980px) {
+      font-size: 18px;
+    }
     img {
       height: 60px;
+      @media screen and (max-width: 980px) {
+        height: 40px;
+      }
     }
   }
+
   .hamburger{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 6px;
+    gap: 4px;
     cursor: pointer;
     .line {
-      width: 32px;
-      height: 4px;
+      width: 24px;
+      height: 3px;
       background-color: black;
     }
     @media screen and (min-width: 980px) {
@@ -120,6 +138,9 @@ header {
     font-weight: 700;
     letter-spacing: -3px;
     line-height: 1;
+    @media screen and (max-width: 980px) {
+      font-size: 40px;
+    }
   }
 
   &>h2 {
@@ -148,6 +169,10 @@ header {
     margin-bottom: 100px;
     line-height: 1.1;
     letter-spacing: -1px;
+    @media screen and (max-width: 980px) {
+      margin-top: 75px;
+      margin-bottom: 50px;
+    }
   }
 }
 
@@ -165,6 +190,13 @@ header {
     column-gap: 40px;
     /* Gap between grid items */
     padding: 20px;
+    @media screen and (max-width: 980px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
   }
 
   .grid-container {
@@ -177,6 +209,14 @@ header {
     margin-left: 75px;
     background-color: #ffffff;
     border-radius: 60px;
+    @media screen and (max-width: 980px) {
+      display: flex;
+      flex-direction: column;
+      margin-left: 0px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 30px;
+    }
   }
 
   .image-left img {
@@ -185,6 +225,11 @@ header {
     max-height: 450px;
     border-radius: 20px;
     margin-left: 50px;
+    @media screen and (max-width: 980px) {
+      width: 100% !important;
+      height: 100%;
+      margin: 0px;
+    }
   }
 
   .text-center {
@@ -200,6 +245,10 @@ header {
     font-weight: 800;
     color: #050F27;
     border-radius: 20px;
+    @media screen and (max-width: 980px) {
+      padding: 20px;
+      font-size: 26px;
+    }
   }
 
   .image-right1 {
@@ -211,6 +260,9 @@ header {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     margin-top: -270px;
+    @media screen and (max-width: 980px) {
+      margin-top: 0px;
+    }
   }
 
   .image-right1 img,
@@ -228,11 +280,18 @@ header {
     text-align: center;
     line-height: 1.1;
     padding: 150px 0px;
+    @media screen and (max-width: 980px) {
+      padding: 30px 0px;
+      font-size: 34px;
+    }
   }
 
   .main-grid {
     background-color: #ffffff;
     padding: 0px 75px;
+    @media screen and (max-width: 980px) {
+      padding: 0px 30px;
+    }
   }
 
   .grid-container {
@@ -245,6 +304,11 @@ header {
     width: 100%; /* Full width of the page */
     margin: 0 auto; /* Center the container */
     padding: 70px;
+    @media screen and (max-width: 980px) {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+    }
     .grid-item{
       display: flex;
       align-items: center;
@@ -282,6 +346,10 @@ header {
     font-weight: 700;
     font-size: 60px;
     line-height: 1.1;
+    @media screen and (max-width: 980px) {
+      font-size: 36px;
+      margin-left: 20px;
+    }
 }
 
 .grid-item1, .grid-item2, .grid-item3, .grid-item4, .grid-item5, .grid-item6, .grid-item7 {
