@@ -225,7 +225,7 @@ header .right span span.active {
   gap: 20px;
   padding-top: 80px;
   flex-direction: column;
-  display: none;
+  display: none !important;
 }
 .right-panel svg {
   height: 36px;
